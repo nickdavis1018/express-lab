@@ -1,6 +1,4 @@
 const express = require('express');
-const { get } = require('http');
-const { getegid } = require('process');
 const app = express();
 const port = 3000;
 
@@ -27,8 +25,6 @@ app.get('/magic/', (req, res)=>{
 app.get('/magic/:question', (req, res)=>{
     res.send(`<h2>Your Question: ${req.params.question}?</h2>` + `<h1>Magic 8-Ball's Answer: ${eightBallAnswers[Math.floor(Math.random() * eightBallAnswers.length)]}</h1><a href=http://localhost:3000/magic>Back to 8-Ball App</a><style>html{text-align: center}</style>`)
 })
-
-
 
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`)
