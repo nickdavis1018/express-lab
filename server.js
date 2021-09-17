@@ -1,4 +1,10 @@
 const express = require('express');
+
+// The below lines of code were auto-inserted into my server.js file right after require('express'). //
+// Not sure of their relevance as the code runs fine after their removal, but I left them in commented-out for good measure. //
+// const { get } = require('http');
+// const { getegid } = require('process'); 
+
 const app = express();
 const port = 3000;
 
